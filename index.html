@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Work Sans' rel='stylesheet'>
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body style="font-family: 'Work Sans';" class="bg-[#f5f5f5]">
+
+    <div id="nav" class="w-full h-[140px]">
+        <div id="top" class="w-full h-[60px] py-[14px] pr-[80px] flex flex-row justify-end">
+            <div class="flex flex-row gap-4">
+                <div class="cursor-pointer">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6C0 2.68629 2.68629 0 6 0H26C29.3137 0 32 2.68629 32 6V26C32 29.3137 29.3137 32 26 32H6C2.68629 32 0 29.3137 0 26V6Z" fill="#FEEBEB"/>
+                        <path d="M8 10.1509C8 9.63786 8.18019 9.21458 8.54054 8.8811C8.9009 8.5476 9.36937 8.38086 9.94595 8.38086C10.5122 8.38086 10.9704 8.54503 11.3205 8.8734C11.6808 9.21203 11.861 9.65326 11.861 10.1971C11.861 10.6897 11.686 11.1001 11.3359 11.4285C10.9756 11.7671 10.5019 11.9364 9.91506 11.9364H9.89961C9.33333 11.9364 8.87517 11.7671 8.5251 11.4285C8.17503 11.0899 8 10.664 8 10.1509ZM8.20077 23.6189V13.3371H11.6293V23.6189H8.20077ZM13.529 23.6189H16.9575V17.8777C16.9575 17.5186 16.9987 17.2415 17.0811 17.0466C17.2252 16.6977 17.444 16.4027 17.7375 16.1615C18.0309 15.9204 18.399 15.7998 18.8417 15.7998C19.9949 15.7998 20.5714 16.5745 20.5714 18.124V23.6189H24V17.7238C24 16.2051 23.6396 15.0533 22.9189 14.2683C22.1982 13.4833 21.2458 13.0908 20.0618 13.0908C18.7336 13.0908 17.6988 13.6603 16.9575 14.7993V14.8301H16.9421L16.9575 14.7993V13.3371H13.529C13.5495 13.6654 13.5598 14.6864 13.5598 16.4001C13.5598 18.1137 13.5495 20.52 13.529 23.6189Z" fill="#ED3326"/>
+                    </svg>
+                </div>
+                <div class="cursor-pointer">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6C0 2.68629 2.68629 0 6 0H26C29.3137 0 32 2.68629 32 6V26C32 29.3137 29.3137 32 26 32H6C2.68629 32 0 29.3137 0 26V6Z" fill="#FEEBEB"/>
+                        <path d="M6.67285 25.335L8.01238 20.3588C6.93208 18.4203 6.58886 16.1582 7.0457 13.9876C7.50254 11.8171 8.72879 9.88366 10.4994 8.54214C12.2701 7.20062 14.4663 6.541 16.6852 6.68431C18.9041 6.82763 20.9967 7.76426 22.5791 9.32235C24.1616 10.8804 25.1276 12.9555 25.3 15.1667C25.4723 17.3778 24.8395 19.5769 23.5176 21.3602C22.1957 23.1436 20.2733 24.3916 18.1034 24.8754C15.9334 25.3591 13.6613 25.046 11.704 23.9937L6.67285 25.335ZM11.9466 22.1315L12.2577 22.3156C13.6754 23.1538 15.3313 23.5006 16.9672 23.3021C18.6032 23.1036 20.1273 22.3708 21.3022 21.2181C22.4771 20.0653 23.2366 18.5573 23.4625 16.929C23.6884 15.3007 23.3679 13.6436 22.551 12.2159C21.7342 10.7882 20.4668 9.67018 18.9463 9.03601C17.4259 8.40183 15.7378 8.28715 14.1452 8.70982C12.5526 9.13249 11.1449 10.0688 10.1415 11.3728C9.1381 12.6768 8.59532 14.2752 8.59777 15.9191C8.59643 17.282 8.97434 18.6187 9.68943 19.7801L9.88456 20.101L9.13569 22.8785L11.9466 22.1315Z" fill="#ED3326"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.498 17.1969C19.3155 17.0502 19.102 16.9469 18.8735 16.8949C18.645 16.843 18.4077 16.8437 18.1795 16.8971C17.8367 17.0391 17.6152 17.5757 17.3937 17.8439C17.347 17.9083 17.2784 17.9534 17.2007 17.9708C17.123 17.9882 17.0417 17.9768 16.9718 17.9386C15.7169 17.4483 14.6649 16.5492 13.9869 15.3874C13.9291 15.3149 13.9017 15.2228 13.9105 15.1306C13.9194 15.0383 13.9638 14.9531 14.0344 14.8929C14.2814 14.649 14.4628 14.3468 14.5617 14.0144C14.5837 13.6478 14.4995 13.2826 14.3191 12.9624C14.1797 12.5134 13.9144 12.1137 13.5544 11.8104C13.3688 11.7271 13.163 11.6991 12.9618 11.73C12.7606 11.7608 12.5726 11.849 12.4206 11.9839C12.1566 12.2111 11.9471 12.4944 11.8075 12.8131C11.6678 13.1317 11.6016 13.4775 11.6137 13.8251C11.6145 14.0202 11.6393 14.2145 11.6875 14.4037C11.81 14.8581 11.9983 15.2923 12.2466 15.6925C12.4257 15.999 12.6211 16.2958 12.8319 16.5815C13.5173 17.5199 14.3788 18.3167 15.3686 18.9276C15.8653 19.238 16.3962 19.4904 16.9507 19.6798C17.5268 19.9403 18.1628 20.0402 18.7913 19.9691C19.1493 19.9151 19.4886 19.774 19.7792 19.5585C20.0698 19.3429 20.3028 19.0594 20.4578 18.7329C20.5488 18.5357 20.5764 18.3152 20.5369 18.1017C20.442 17.6651 19.8566 17.4073 19.498 17.1969Z" fill="#ED3326"/>
+                    </svg>
+                </div>
+                <div class="cursor-pointer">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6C0 2.68629 2.68629 0 6 0H26C29.3137 0 32 2.68629 32 6V26C32 29.3137 29.3137 32 26 32H6C2.68629 32 0 29.3137 0 26V6Z" fill="#FEEBEB"/>
+                        <path d="M17.3016 24V16.7017H19.8746L20.2599 13.8573H17.3015V12.0414C17.3015 11.2179 17.5417 10.6567 18.7821 10.6567L20.364 10.656V8.11206C20.0904 8.07746 19.1513 8 18.0588 8C15.7779 8 14.2164 9.32549 14.2164 11.7598V13.8573H11.6367V16.7017H14.2164V23.9999H17.3016V24Z" fill="#ED3326"/>
+                    </svg>
+                </div>
+                <div class="cursor-pointer">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6C0 2.68629 2.68629 0 6 0H26C29.3137 0 32 2.68629 32 6V26C32 29.3137 29.3137 32 26 32H6C2.68629 32 0 29.3137 0 26V6Z" fill="#FEEBEB"/>
+                        <path d="M22.8058 9.76686C25.0154 13.0358 26.1067 16.723 25.6988 20.9678C25.697 20.9858 25.6878 21.0023 25.6731 21.0131C23.9998 22.2494 22.3785 22.9997 20.7801 23.4973C20.7676 23.5011 20.7543 23.5009 20.742 23.4967C20.7297 23.4925 20.7189 23.4845 20.7113 23.4739C20.3421 22.9569 20.0065 22.4118 19.7125 21.8394C19.6957 21.8057 19.7111 21.7651 19.7458 21.7518C20.2787 21.5498 20.7855 21.3077 21.2729 21.021C21.3113 20.9983 21.3137 20.943 21.2782 20.9164C21.1748 20.8391 21.0723 20.7579 20.9743 20.6767C20.9559 20.6617 20.9312 20.6588 20.9104 20.6688C17.746 22.1392 14.2795 22.1392 11.0777 20.6688C11.0569 20.6595 11.0322 20.6627 11.0144 20.6775C10.9165 20.7587 10.8138 20.8391 10.7113 20.9164C10.6759 20.943 10.6788 20.9983 10.7174 21.021C11.2049 21.3022 11.7116 21.5498 12.2438 21.7528C12.2783 21.7661 12.2946 21.8057 12.2775 21.8394C11.9899 22.4126 11.6544 22.9576 11.2782 23.4746C11.2619 23.4955 11.2349 23.5051 11.2095 23.4973C9.61862 22.9997 7.9974 22.2494 6.32409 21.0131C6.31015 21.0023 6.30012 20.9851 6.29865 20.9671C5.95773 17.2954 6.65254 13.5776 9.18892 9.76612C9.19503 9.75603 9.20433 9.74816 9.21509 9.74348C10.4631 9.16717 11.8001 8.74318 13.1976 8.50104C13.223 8.4971 13.2485 8.50891 13.2617 8.53155C13.4343 8.83915 13.6317 9.23361 13.7652 9.55597C15.2382 9.32958 16.7342 9.32958 18.2381 9.55597C18.3716 9.2405 18.5621 8.83915 18.734 8.53155C18.7402 8.52032 18.7497 8.51132 18.7612 8.50584C18.7727 8.50036 18.7856 8.49868 18.7981 8.50104C20.1963 8.74392 21.5333 9.16791 22.7804 9.74348C22.7914 9.74816 22.8004 9.75603 22.8058 9.76686V9.76686ZM14.5141 16.7481C14.5295 15.6626 13.743 14.7645 12.7557 14.7645C11.7764 14.7645 10.9975 15.6548 10.9975 16.7481C10.9975 17.8412 11.7918 18.7315 12.7557 18.7315C13.7351 18.7315 14.5141 17.8412 14.5141 16.7481V16.7481ZM21.0151 16.7481C21.0305 15.6626 20.244 14.7645 19.2569 14.7645C18.2774 14.7645 17.4985 15.6548 17.4985 16.7481C17.4985 17.8412 18.2928 18.7315 19.2569 18.7315C20.244 18.7315 21.0151 17.8412 21.0151 16.7481V16.7481Z" fill="#ED3326"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div id="bottom" class="w-full lg:px-[80px] md:px-[40px] py-[20px] flex flex-row gap-4 flex-wrap justify-between bg-white">
+            <div id="logo" class="h-full ratio-[1] cursor-pointer">
+                <img class="w-full h-full" src="/assets/logo.svg" />
+            </div>
+            <div id="menu" class="flex flex-row lg:gap-6 md:gap-2 items-center text-[16px] text-[#222324] font-normal">
+                <div class="flex flex-row gap-1 justify-baseline items-center cursor-pointer">
+                    <p>Products</p>
+                    <div class="w-[20px] h-[20px] flex flex-col justify-center">
+                        <div class="flex flex-col justify-center">
+                            <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.08789 1.5L6.08789 6.5L11.0879 1.5" stroke="#222324" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="cursor-pointer">Pricing</div>
+                <div class="flex flex-row gap-1 justify-baseline items-center cursor-pointer">
+                    <p>Resources</p>
+                    <div class="w-[20px] h-[20px] flex flex-col justify-center">
+                        <div class="flex flex-col justify-center">
+                            <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.08789 1.5L6.08789 6.5L11.0879 1.5" stroke="#222324" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-1 justify-baseline items-center cursor-pointer">
+                    <p>Community</p>
+                    <div class="w-[20px] h-[20px] flex flex-col justify-center">
+                        <div class="flex flex-col justify-center">
+                            <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.08789 1.5L6.08789 6.5L11.0879 1.5" stroke="#222324" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="cursor-pointer">Contact Us</div>
+            </div>
+            <div id="action" class="flex flex-row gap-4">
+                <div id="login" class="lg:w-[132px] w-auto lg:px-[28px] px-[12px] h-[40px] rounded-[6px] border-solid border-[1px] border-[#ED3326] text-center flex flex-col justify-center text-[#ED3326] text-[14px] font-semibold cursor-pointer">
+                    Login
+                </div>
+                <div id="started" class="lg:w-[132px] w-auto lg:px-[24px] px-[8px] h-[40px] rounded-[6px] border-solid border-[1px] border-[#ED3326] bg-[#ED3326] text-center flex flex-col justify-center text-white text-[14px] font-semibold cursor-pointer">
+                    Get Started
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="first" class="w-full lg:pt-[100px] md:pt-[60px] lg:px-[120px] md:px-[80px] flex flex-row gap-8 items-center justify-center">
+        <div class="z-10 w-full pt-[100px] px-[120px] flex flex-col gap-8">
+            <div id="top" class="flex flex-col gap-2 items-center">
+                <div id="tag" class="w-[282px] h-[34px] rounded-[62px] bg-[#FDEEE7] flex flex-row gap-[6px] items-center justify-center">
+                    <div>
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.8076 0C6.77678 5.59937 5.94112 6.43498 0.341797 7.46581C5.94116 8.49663 6.77678 9.33225 7.8076 14.9316C8.83843 9.33225 9.67404 8.49663 15.2734 7.46581C9.67404 6.43498 8.83839 5.59937 7.8076 0ZM15.9106 10.5041C15.2551 14.0651 14.7236 14.5965 11.1626 15.252C14.7236 15.9076 15.2551 16.4391 15.9106 20C16.5661 16.4391 17.0976 15.9075 20.6585 15.252C17.0975 14.5965 16.5662 14.0651 15.9106 10.5041Z" fill="#EA5511"/>
+                        </svg>
+                    </div>
+                    <p class="text-[#EA5511] text-[14px] font-medium">40,000+ Happy Users WorldWide</p>
+                </div>
+                <div id="content" class="flex flex-col items-center text-center">
+                    <p class="max-w-[1200px] text-[56px] font-semibold text-[#222324]">Empower, Expand, And Excel Online With <span class="w-[259px] h-[72px] bg-[#F7A19B33] text-center rounded-[16px] text-[#ED3326]">&nbsp;WEMSAY&nbsp;</span> Your All In One Solution.</p>
+                    <p class="max-w-[797px] text-[18px] font-normal text-[#595A5C]">Elevate your online presence with WEMSAY - the all-in-one platform for seamless web building, SEO, analytics, campaigns, domains, webshop, and rank tracking.</p>
+                </div>
+            </div>
+            <div id="bottom" class="flex flex-row gap-6 justify-center">
+                <div id="started" class="w-[185px] h-[48px] rounded-[6px] border-solid border-[1px] border-[#ED3326] bg-[#ED3326] text-center flex flex-col justify-center text-white text-[18px] font-semibold cursor-pointer">
+                    Get Started
+                </div>
+                <div id="login" class="w-[185px] h-[48px] rounded-[6px] border-solid border-[1px] border-[#ED3326] text-center flex flex-row justify-center items-center gap-2 text-[#ED3326] text-[18px] font-semibold cursor-pointer">
+                    <div>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.16699 4.15809C4.16699 3.34879 4.16699 2.94414 4.33573 2.72108C4.48274 2.52675 4.70743 2.4065 4.95066 2.39198C5.22986 2.37531 5.56655 2.59977 6.23993 3.04869L15.0029 8.89067C15.5593 9.2616 15.8375 9.44707 15.9344 9.68084C16.0192 9.88522 16.0192 10.1149 15.9344 10.3193C15.8375 10.5531 15.5593 10.7385 15.0029 11.1095L6.23992 16.9514C5.56655 17.4004 5.22986 17.6248 4.95066 17.6082C4.70743 17.5936 4.48274 17.4734 4.33573 17.2791C4.16699 17.056 4.16699 16.6513 4.16699 15.842V4.15809Z" stroke="#ED3326" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <p>Watch Demo</p>
+                </div>
+            </div>
+        </div>
+        <div class="absolute m-auto">
+            <img src="/assets/ic_first_img.svg" />
+        </div>
+    </div>
+
+    <div id="mockup" class="static w-full h-auto flex flex-row justify-center items-center mx-[auto] lg:mt-[128px] lg:mb-[100px] md:mt-[128px] md:mb-[100px]">
+        <img class="z-10" src="/assets/mockup.svg" />
+        <div class="absolute z-0">
+            <img class="w-full h-full" src="/assets/ic_red_bg.svg" />
+        </div>
+    </div>
+
+    <div id="trustedby" class="w-full px-[120px] py-[40px] flex flex-col gap-8">
+        <p class="text-[24px] font-semibold text-[#222324] text-center">Trusted By Industry Leading Organizations</p>
+        <div id="brands" class="flex flex-row justify-between flex-wrap gap-4 items-center">
+            <img src="/assets/brand1.svg" />
+            <img src="/assets/brand2.svg" />
+            <img src="/assets/brand3.svg" />
+            <img src="/assets/brand4.svg" />
+            <img src="/assets/brand5.svg" />
+            <img src="/assets/brand6.svg" />
+        </div>
+    </div>
+
+    <div id="features" class="lg:px-[120px] lg:py-[100px] md:px-[80px] md:py-[60px] flex flex-col gap-[52px]">
+        <p id="heading" class="text-[32px] font-semibold text-[#222324] text-center">
+            Streamlined <span class="w-[259px] h-[72px] bg-[#F7A19B33] text-center rounded-[16px] text-[#ED3326]">&nbsp;Services&nbsp;</span> For You
+        </p>
+        <div class="flex flex-row gap-12 flex-wrap">
+            <div class="flex-1 flex flex-row gap-8">
+                <div class="w-[10px] flex flex-col gap-2">
+                    <div class="w-full w-[100px] bg-[#ED3326] rounded-[16px]"></div>
+                    <div class="w-full ratio-1 bg-[#F9C0BC] rounded-full"></div>
+                    <div class="w-full ratio-1 bg-[#F9C0BC] rounded-full"></div>
+                    <div class="w-full ratio-1 bg-[#F9C0BC] rounded-full"></div>
+                    <div class="w-full ratio-1 bg-[#F9C0BC] rounded-full"></div>
+                    <div class="w-full ratio-1 bg-[#F9C0BC] rounded-full"></div>
+                    <div class="w-full ratio-1 bg-[#F9C0BC] rounded-full"></div>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <div class="flex flex-col gap-4">
+                        <div class="w-[48px] h-[48px] p-[10px] bg-white border-[1px] border-[#F8CAB5] rounded-[12px] text-[#EA5511] text-[18px] font-semibold text-center flex flex-col justify-center">01</div>
+                        <div class="flex flex-col gap-2 text-[#303133]">
+                            <p class="text-[24px] font-semibold">Craft Your Digital Presence</p>
+                            <p class="text-[16px] font-normal">Empower your online identity with our intuitive web builder service. Create stunning websites effortlessly, whether you're a beginner or an experienced designer. Customize, launch, and showcase your unique brand to the world.</p>
+                        </div>
+                    </div>
+                    <div class="w-[140px] h-[40px] rounded-[6px] border-[1px] border-[#ED3326] flex flex-row gap-2 justify-center items-center">
+                        <p class="text-[16px] font-semibold text-[#ED3326]">Learn more</p>
+                        <div class="w-[20px] h-[20px]">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.16699 9.99984H15.8337M15.8337 9.99984L10.0003 4.1665M15.8337 9.99984L10.0003 15.8332" stroke="#ED3326" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 min-w-[600px] min-h-[320px]">
+                <img class="w-full h-full" src="/assets/img_login.svg" />
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery" class="lg:px-[120px] lg:py-[100px] md:px-[80px] md:py-[60px] flex flex-col gap-[52px] items-center">
+        <p id="heading" class="text-[32px] font-semibold text-[#222324]">
+            All In One <span class="w-[259px] h-[72px] bg-[#F7A19B33] text-center rounded-[16px] text-[#ED3326]">&nbsp;Tool&nbsp;</span> Like No Other
+        </p>
+        <div class="max-w-[1200px] max-h-[796px] flex flex-col justify-center items-center">
+            <img class="w-full h-full z-10" src="/assets/img_gallery.svg" />
+            <img class="absolute w-full h-full" src="/assets/ic_red_bg.svg" />
+            
+        </div>
+        <div class="w-[200px] h-[44px] bg-[#ED3326] rounded-[6px] text-white text-center flex flex-col justify-center text-[16px] font-semibold">
+            Get Started
+        </div>
+    </div>
+
+    <div id="FAQ1" class="lg:px-[120px] lg:py-[100px] md:px-[80px] md:py-[60px] flex flex-col gap-[52px] items-center">
+        <p id="heading" class="text-[32px] font-semibold text-[#222324]">
+            Frequently Asked <span class="w-[259px] h-[72px] bg-[#F7A19B33] text-center rounded-[16px] text-[#ED3326]">&nbsp;Questions&nbsp;</span>
+        </p>
+        <div id="container" class="max-w-[768px] px-8 flex flex-col gap-8">
+            <div class="flex flex-row gap-6">
+                <div class="flex-1 flex flex-col gap-2">
+                    <p class="w-full text-[18px] font-semibold text-[#222324]">Is there a free trial available?</p>
+                    <p class="w-full text-[16px] font-normal text-[#595A5C]">Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.</p>
+                </div>
+                <div class="w-[24px] h-[26px]">
+                    <img class="w-full h-full" src="/assets/ic_minus.svg" />
+                </div>
+            </div>
+            <div class="flex flex-row gap-6 border-t-[1px] border-solid border-[#E6E6E6] pt-6">
+                <div class="w-full flex flex-col gap-2">
+                    <p class="w-full text-[18px] font-semibold text-[#222324]">Can I change my plan later?</p>
+                    <!-- <p class="w-full text-[16px] font-normal text-[#595A5C]">Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.</p> -->
+                </div>
+                <div class="w-[24px] h-[26px]">
+                    <img class="w-full h-full" src="/assets/ic_plus.svg" />
+                </div>
+            </div>
+            <div class="flex flex-row gap-6 border-t-[1px] border-solid border-[#E6E6E6] pt-6">
+                <div class="w-full flex flex-col gap-2">
+                    <p class="w-full text-[18px] font-semibold text-[#222324]">What is your cancellation policy?</p>
+                    <!-- <p class="w-full text-[16px] font-normal text-[#595A5C]">Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.</p> -->
+                </div>
+                <div class="w-[24px] h-[26px]">
+                    <img class="w-full h-full" src="/assets/ic_plus.svg" />
+                </div>
+            </div>
+            <div class="flex flex-row gap-6 border-t-[1px] border-solid border-[#E6E6E6] pt-6">
+                <div class="w-full flex flex-col gap-2">
+                    <p class="w-full text-[18px] font-semibold text-[#222324]">Can other info be added to an invoice?</p>
+                    <!-- <p class="w-full text-[16px] font-normal text-[#595A5C]">Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.</p> -->
+                </div>
+                <div class="w-[24px] h-[26px]">
+                    <img class="w-full h-full" src="/assets/ic_plus.svg" />
+                </div>
+            </div>
+            <div class="flex flex-row gap-6 border-t-[1px] border-solid border-[#E6E6E6] pt-6">
+                <div class="w-full flex flex-col gap-2">
+                    <p class="w-full text-[18px] font-semibold text-[#222324]">How does billing work?</p>
+                    <!-- <p class="w-full text-[16px] font-normal text-[#595A5C]">Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.</p> -->
+                </div>
+                <div class="w-[24px] h-[26px]">
+                    <img class="w-full h-full" src="/assets/ic_plus.svg" />
+                </div>
+            </div>
+            <div class="flex flex-row gap-6 border-t-[1px] border-solid border-[#E6E6E6] pt-6">
+                <div class="w-full flex flex-col gap-2">
+                    <p class="w-full text-[18px] font-semibold text-[#222324]">How do I change my account email?</p>
+                    <!-- <p class="w-full text-[16px] font-normal text-[#595A5C]">Yes, you can try us for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.</p> -->
+                </div>
+                <div class="w-[24px] h-[26px]">
+                    <img class="w-full h-full" src="/assets/ic_plus.svg" />
+                </div>
+            </div>
+        </div>
+        <div id="content" class="flex flex-col gap-8 items-center">
+            <div class="flex flex-col gap-2 items-center max-w-[768px]">
+                <p class="text-[20px] font-semibold text-[#222324]">Still have questions?</p>
+                <p class="text-[16px] font-normal text-[#595A5C]">Can't find the answer you're looking for? Please chat to our friendly team.</p>
+            </div>
+            <div class="w-[200px] h-[44px] bg-[#ED3326] rounded-[6px] text-white text-center flex flex-col justify-center text-[16px] font-semibold cursor-pointer">
+                Get Started
+            </div>
+        </div>
+    </div>
+
+    <div id="testimonials" class="relative lg:px-[120px] md:px-[80px] md:py-[60px] lg:py-[100px] flex flex-col gap-[52px] items-center">
+        <p id="heading" class="text-[32px] font-semibold text-[#222324]">
+            User <span class="w-[259px] h-[72px] bg-[#F7A19B33] text-center rounded-[16px] text-[#ED3326]">&nbsp;Experiences&nbsp;</span>Shared
+        </p>
+        <div class="">
+            <div class="flex flex-row gap-6">
+                <div class="flex-1 flex flex-col gap-8">
+                    <div id="card" class="relative p-8 bg-white rounded-[24px] flex flex-col gap-4 items-center justify-center">
+                        <p>Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius. </p>
+                        <div class="flex flex-row gap-3">
+                            <div class="w-[40px] h-[40px]">
+                                <img class="w-full h-full" src="/assets/ic_avatar1.svg" />
+                            </div>
+                            <div class="flex flex-col font-medium text-center">
+                                <p class="text-[16px] text-[#303133]">Cooper, Kristin</p>
+                                <p class="text-[14px] text-[#A0A0A1]">14 July, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                        </div>
+                        <div class="absolute left-[34.5px] top-[-20px]">
+                            <img src="/assets/ic_quotes.svg" />
+                        </div>
+                    </div>
+                    <div id="card" class="relative p-8 bg-white rounded-[24px] flex flex-col gap-4 items-center justify-center">
+                        <p>Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eiuuid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius.</p>
+                        <div class="flex flex-row gap-3">
+                            <div class="w-[40px] h-[40px]">
+                                <img class="w-full h-full" src="/assets/ic_avatar2.svg" />
+                            </div>
+                            <div class="flex flex-col font-medium text-center">
+                                <p class="text-[16px] text-[#303133]">Nguyen, Shane</p>
+                                <p class="text-[14px] text-[#A0A0A1]">14 July, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                        </div>
+                        <div class="absolute left-[34.5px] top-[-20px]">
+                            <img src="/assets/ic_quotes.svg" />
+                        </div>
+                    </div>
+                    <div id="card" class="relative p-8 bg-white rounded-[24px] flex flex-col gap-4 items-center justify-center">
+                        <p>Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius. Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius.</p>
+                        <div class="flex flex-row gap-3">
+                            <div class="w-[40px] h-[40px]">
+                                <img class="w-full h-full" src="/assets/ic_avatar3.svg" />
+                            </div>
+                            <div class="flex flex-col font-medium text-center">
+                                <p class="text-[16px] text-[#303133]">Black, Marvin</p>
+                                <p class="text-[14px] text-[#A0A0A1]">14 July, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                        </div>
+                        <div class="absolute left-[34.5px] top-[-20px]">
+                            <img src="/assets/ic_quotes.svg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 flex flex-col gap-8">
+                    <div id="card" class="relative p-8 bg-white rounded-[24px] flex flex-col gap-4 items-center justify-center">
+                        <p>Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius. Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius.</p>
+                        <div class="flex flex-row gap-3">
+                            <div class="w-[40px] h-[40px]">
+                                <img class="w-full h-full" src="/assets/ic_avatar4.svg" />
+                            </div>
+                            <div class="flex flex-col font-medium text-center">
+                                <p class="text-[16px] text-[#303133]">Miles, Esther</p>
+                                <p class="text-[14px] text-[#A0A0A1]">14 July, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                        </div>
+                        <div class="absolute left-[34.5px] top-[-20px]">
+                            <img src="/assets/ic_quotes.svg" />
+                        </div>
+                    </div>
+                    <div id="card" class="relative p-8 bg-white rounded-[24px] flex flex-col gap-4 items-center justify-center">
+                        <p>Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius. </p>
+                        <div class="flex flex-row gap-3">
+                            <div class="w-[40px] h-[40px]">
+                                <img class="w-full h-full" src="/assets/ic_avatar5.svg" />
+                            </div>
+                            <div class="flex flex-col font-medium text-center">
+                                <p class="text-[16px] text-[#303133]">Henry, Arthur</p>
+                                <p class="text-[14px] text-[#A0A0A1]">14 July, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                        </div>
+                        <div class="absolute left-[34.5px] top-[-20px]">
+                            <img src="/assets/ic_quotes.svg" />
+                        </div>
+                    </div>
+                    <div id="card" class="relative p-8 bg-white rounded-[24px] flex flex-col gap-4 items-center justify-center">
+                        <p>Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius. Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius.</p>
+                        <div class="flex flex-row gap-3">
+                            <div class="w-[40px] h-[40px]">
+                                <img class="w-full h-full" src="/assets/ic_avatar6.svg" />
+                            </div>
+                            <div class="flex flex-col font-medium text-center">
+                                <p class="text-[16px] text-[#303133]">Black, Marvin</p>
+                                <p class="text-[14px] text-[#A0A0A1]">14 July, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                        </div>
+                        <div class="absolute left-[34.5px] top-[-20px]">
+                            <img src="/assets/ic_quotes.svg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 flex flex-col gap-8">
+                    <div id="card" class="relative p-8 bg-white rounded-[24px] flex flex-col gap-4 items-center justify-center">
+                        <p>Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius.  qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius.</p>
+                        <div class="flex flex-row gap-3">
+                            <div class="w-[40px] h-[40px]">
+                                <img class="w-full h-full" src="/assets/ic_avatar7.svg" />
+                            </div>
+                            <div class="flex flex-col font-medium text-center">
+                                <p class="text-[16px] text-[#303133]">Black, Marvin</p>
+                                <p class="text-[14px] text-[#A0A0A1]">14 July, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                        </div>
+                        <div class="absolute left-[34.5px] top-[-20px]">
+                            <img src="/assets/ic_quotes.svg" />
+                        </div>
+                    </div>
+                    <div id="card" class="relative p-8 bg-white rounded-[24px] flex flex-col gap-4 items-center justify-center">
+                        <p>Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius. Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius.</p>
+                        <div class="flex flex-row gap-3">
+                            <div class="w-[40px] h-[40px]">
+                                <img class="w-full h-full" src="/assets/ic_avatar8.svg" />
+                            </div>
+                            <div class="flex flex-col font-medium text-center">
+                                <p class="text-[16px] text-[#303133]">Flores, Juanita</p>
+                                <p class="text-[14px] text-[#A0A0A1]">14 July, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                        </div>
+                        <div class="absolute left-[34.5px] top-[-20px]">
+                            <img src="/assets/ic_quotes.svg" />
+                        </div>
+                    </div>
+                    <div id="card" class="relative p-8 bg-white rounded-[24px] flex flex-col gap-4 items-center justify-center">
+                        <p>Quisquam similique molestiae quia quod dolorum et. Aliquid blanditiis voluptatem maxime qui et voluptas minus. Non provident pariatur nisi. Repellat voluptas culpa eius. </p>
+                        <div class="flex flex-row gap-3">
+                            <div class="w-[40px] h-[40px]">
+                                <img class="w-full h-full" src="/assets/ic_avatar9.svg" />
+                            </div>
+                            <div class="flex flex-col font-medium text-center">
+                                <p class="text-[16px] text-[#303133]">Black, Marvin</p>
+                                <p class="text-[14px] text-[#A0A0A1]">14 July, 2023</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-2">
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                            <img src="/assets/ic_star.svg" />
+                        </div>
+                        <div class="absolute left-[34.5px] top-[-20px]">
+                            <img src="/assets/ic_quotes.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute"></div>
+        </div>
+        <div class="absolute w-full bottom-0">
+            <img class="w-full h-full" src="/assets/ic_testimonial_bg.svg" />
+        </div>
+        <div class="w-[200px] h-[44px] z-10 bg-[#ED3326] rounded-[6px] text-white text-center flex flex-col justify-center text-[16px] font-semibold cursor-pointer">
+            Load More
+        </div>
+    </div>
+
+    <div id="FAQ2" class="lg:px-[120px] lg:py-[100px] md:px-[80px] md:py-[60px] flex flex-col gap-[52px] items-center">
+        <div id="content" class="w-full h-full flex flex-row" style="background: linear-gradient(45deg, #E42919, #EA5610); border-radius: 16px;">
+            <div class="w-full p-[64px] flex flex-col gap-8">
+                <div class="flex flex-col gap-2 text-white">
+                    <p class="text-[32px] font-semibold">WEMASY Is Here To Help You!</p>
+                    <p class="text-[16px] font-normal">Elevate your experience with our tailored solutions and expert guidance. Click now to embark on a seamless journey toward success. Your path to simplicity starts here.</p>
+                </div>
+                <div class="w-[200px] h-[44px] bg-white rounded-[6px] text-[#ED3326] text-center flex flex-col justify-center text-[16px] font-semibold cursor-pointer">
+                    Get Started
+                </div>
+            </div>
+            <div>
+                <img class="w-full h-full rounded-[16px]" src="/assets/img_contact.svg" />
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="w-full bg-white flex flex-row justify-center">
+        <div class="py-[64px] px-[120px] flex flex-col gap-8">
+            <div id="container" class="flex flex-row gap-[64px] justify-between">
+                <div class="w-[320px] flex flex-col gap-3">
+                    <div class="w-[130px] h-[30px]">
+                        <img class="w-full h-full" src="/assets/logo.svg" />
+                    </div>
+                    <p class="text-[16px] font-normal text-[#303133]">Design amazing digital experiences that create more happy in the world.</p>
+                </div>
+                <div class="flex flex-row flex-wrap justify-between gap-8">
+                    <div class="flex flex-col gap-4">
+                        <p class="text-[14px] font-normal text-[#595A5C]">Product</p>
+                        <div class="flex flex-col gap-3 text-[16px] font-medium text-[#222324]">
+                            <p class="cursor-pointer">Overview</p>
+                            <p class="cursor-pointer">Features</p>
+                            <p class="cursor-pointer">Solutions</p>
+                            <p class="cursor-pointer">Tutorials</p>
+                            <p class="cursor-pointer">Pricing</p>
+                            <p class="cursor-pointer">Releases</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-[14px] font-normal text-[#595A5C]">Company</p>
+                        <div class="flex flex-col gap-3 text-[16px] font-medium text-[#222324]">
+                            <p class="cursor-pointer">About us</p>
+                            <p class="cursor-pointer">Careers</p>
+                            <p class="cursor-pointer">Press</p>
+                            <p class="cursor-pointer">News</p>
+                            <p class="cursor-pointer">Media kit</p>
+                            <p class="cursor-pointer">Contact</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-[14px] font-normal text-[#595A5C]">Resources</p>
+                        <div class="flex flex-col gap-3 text-[16px] font-medium text-[#222324]">
+                            <p class="cursor-pointer">Blog</p>
+                            <p class="cursor-pointer">Newsletter</p>
+                            <p class="cursor-pointer">Events</p>
+                            <p class="cursor-pointer">Help centre</p>
+                            <p class="cursor-pointer">Tutorials</p>
+                            <p class="cursor-pointer">Support</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-[14px] font-normal text-[#595A5C]">Social</p>
+                        <div class="flex flex-col gap-3 text-[16px] font-medium text-[#222324]">
+                            <p class="cursor-pointer">X</p>
+                            <p class="cursor-pointer">LinkedIn</p>
+                            <p class="cursor-pointer">Facebook</p>
+                            <p class="cursor-pointer">YouTube</p>
+                            <p class="cursor-pointer">Facebook</p>
+                            <p class="cursor-pointer">Instagram</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <p class="text-[14px] font-normal text-[#595A5C]">Legal</p>
+                        <div class="flex flex-col gap-3 text-[16px] font-medium text-[#222324]">
+                            <p class="cursor-pointer">Terms</p>
+                            <p class="cursor-pointer">Privacy</p>
+                            <p class="cursor-pointer">Cookies</p>
+                            <p class="cursor-pointer">Licenses</p>
+                            <p class="cursor-pointer">Settings</p>
+                            <p class="cursor-pointer">Contact</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section" class="px-[120px] py-6 flex flex-row flex-wrap justify-between gap-4">
+                <div class="flex flex-col gap-2 text-[#303133]">
+                    <p class="text-[20px] font-semibold">Subscribe To Our Newsletters</p>
+                    <p class="text-[16px] font-normal">Stay up to date with the latest news, announcements, and articles.</p>
+                </div>
+                <div class="w-[400px] flex flex-row justify-center items-center gap-4">
+                    <div class="flex-1 h-[44px]">
+                        <input class="w-full h-full px-[14px] py-[10px] border-[1px] border-solid border-[#A0A0A1] rounded-[6px]" placeholder="Enter your email" />
+                    </div>
+                    <div class="rounded-[6px] bg-[#ED3326] px-[18px] py-[10px] text-[16px] font-semibold text-white cursor-pointer">Subscribe</div>
+                </div>
+            </div>
+            <div id="container" class="px-[120px] pt-8 border-t-[1px] border-solid border-[#D1D1D1] flex flex-row gap-8">
+                <p class="flex-1 text-[16px] font-medium text-[#A0A0A1]">© 2023 WEMASY. All rights reserved.</p>
+                <div class="flex flex-row gap-3">
+                    <img class="cursor-pointer" src="/assets/ic_facebook.svg" />
+                    <img class="cursor-pointer" src="/assets/ic_instagram.svg" />
+                    <img class="cursor-pointer" src="/assets/ic_x.svg" />
+                    <img class="cursor-pointer" src="/assets/ic_linkedin.svg" />
+                    <img class="cursor-pointer" src="/assets/ic_youtube.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
